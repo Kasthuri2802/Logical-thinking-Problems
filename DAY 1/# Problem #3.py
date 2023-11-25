@@ -15,7 +15,7 @@ MathsMarks = [92,85,95,70,56,40,54]      #list of MathsMarks
 MathsGrade=[]
 EnglishMarks = [89,56,34,37,80,67,50]    #list of EnglishMarks  
 EnglishGrade=[]  
-for x in range(len(CSMarks)):
+# for x in range(len(CSMarks)):
 
 
 

@@ -17,4 +17,6 @@ for i in range(n):
         print(chr(num),end=" ")
         num+=1
     print()
-    
+        
+        
+   

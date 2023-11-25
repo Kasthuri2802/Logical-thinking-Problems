@@ -13,7 +13,7 @@ def reverse(x):
 
 # function to open a file
 def fileOpen():
-    return open("E:\Internship Program\input.txt","r")
+    return open("E:\GitHub\Logical-thinking-Problems\DAY 4\input file.txt","r")
 
 # main function  
 file= fileOpen()

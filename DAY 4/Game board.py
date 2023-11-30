@@ -60,7 +60,7 @@ def gameOfPlayerB():
     continuePlaying = input("Press 'Y' to continue the game and Press 'N' to exit the game: ") # for asking the player to continue the game or not
     if (continuePlaying=='y' or continuePlaying=='Y'): # if YES player A plays the game
         gameOfPlayerA()
-    else:     # Else game gets ended
+    else:                        # Else game gets ended
         exit
 
 

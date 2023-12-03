@@ -20,5 +20,5 @@ file= fileOpen()
 for line in file:   #iterate through each line in a file
     words=line.split()  #store each words in a line as list
     for word in words:    #iterate through each word in a list
-        print(reverse(word),end=" ")
+        print(reverse(word),end=", ")
     print()

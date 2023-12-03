@@ -5,8 +5,7 @@ for each word. Write this information at the end of file under the heading "Summ
 """
 four_letter_words={}
 words=[]
-count=0
-x=0
+
 
 import string
 def count_4_letter_words(passage):
@@ -14,15 +13,11 @@ def count_4_letter_words(passage):
     words=passage.split()
     for word in words:
         if(len(word)==4):
-            four_letter_words[word]=count
-        if word in four_letter_words:
-            count=count+1
-            four_letter_words[word]=count
+            if word not in four_letter_words:
+                four_letter_words[word]=1
+            elif word in four_letter_words:
+                four_letter_words[word]=four_letter_words[word]+1
     print(four_letter_words)
-
-
-
-
 try:
     file=open("E:\GitHub\Logical-thinking-Problems\DAY 3\input.txt","r")
     for passage in file:
@@ -31,6 +26,7 @@ try:
     
 except:
     print("Something went wrong when opening the file")
+   
 # four={"king":1,"went":2,"deer":3}
 # four["deer"]=four["deer"]+1
 # print(four["deer"])

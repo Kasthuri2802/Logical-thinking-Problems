@@ -8,15 +8,15 @@
 
 # look at the output and find the pattern. Hint - add next letter in the alphabet in each row
 
-n=int(input("enter number of rows: "))
-m=0
-for i in range(n):
-    num=97
-    m=2*m+1
-    for j in range(m):
-        print(chr(num),end=" ")
-        num+=1
-    print()
+
+start=input("Enter the starting position('A'to'Z'): ")
+end=input("Enter the ending position('A'to'Z'): ")
+temp=start
+while(start<=end):
+    print(temp)
+    start=chr(ord(start)+1)
+    temp=temp+start+temp
+
         
         
    

@@ -5,8 +5,6 @@ for each word. Write this information at the end of file under the heading "Summ
 """
 four_letter_words={}
 words=[]
-
-
 import string
 def count_4_letter_words(passage):
     passage=passage.translate(str.maketrans("","",string.punctuation))
@@ -23,7 +21,20 @@ try:
     for passage in file:
         passage = passage.lower()
     count_4_letter_words(passage)
+   
+
+    # file=open("E:\GitHub\Logical-thinking-Problems\DAY 3\input.txt","r")
+    # heading="Summary of 4 letter words"
+    # result=print(four_letter_words)
+    # file.write(heading)
+    # file.write(result)
+    # file.close()
     
+    # file=open("E:\GitHub\Logical-thinking-Problems\DAY 3\input.txt","r")
+    # print(file.read())
+    # file.close()
+
+
 except:
     print("Something went wrong when opening the file")
    

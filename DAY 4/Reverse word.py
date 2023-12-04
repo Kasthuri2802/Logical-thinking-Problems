@@ -12,13 +12,13 @@ def reverse(x):
     return x[::-1]
 
 # function to open a file
-def fileOpen():
-    return open("E:\GitHub\Logical-thinking-Problems\DAY 4\input file.txt","r")
+# def fileOpen():
+#     return open("E:\GitHub\Logical-thinking-Problems\DAY 4\input file.txt","r")
 
 # main function  
-file= fileOpen()
+file= "I am sayur"
 for line in file:   #iterate through each line in a file
     words=line.split()  #store each words in a line as list
     for word in words:    #iterate through each word in a list
-        print(reverse(word),end=", ")
+        print(reverse(word),end=" ")
     print()

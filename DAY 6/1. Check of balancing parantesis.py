@@ -11,23 +11,35 @@ Output False
 
 """
 
-def check_balance(input):
-    open=[]
-    close=[]
-    for i in input:
-        # print(i)
-        if(i=="(" or i=="[" or i=="{"):
-            open.append(i)
-        elif(i==")" or i=="]" or i=="}"):
-            close.append(i)
-    print(open)
-    print(close)
-    if(len(open)==len(close)):
+def are_Pairs(open,close):
+    if open=='(' and close==')':
+        return True
+    if open=='{' and close=='}':
+        return True
+    if open=='[' and close==']':
+        return True
+    return False
+
+def check_balance(A):
+    stack=[]
+    for i in A:
+        if i=='(' or i=='{' or i=='[':
+            stack.append(i)
+        elif i==')' or i=='}' or i==']':
+            if are_Pairs(stack[-1],i):
+                stack.pop()
+            else:
+                return False
+    if len(stack)==0:
         return True
     else:
         return False
-    
+            
 input_string=input("Enter the input: ")
-print(check_balance(input_string))    
+if(check_balance(input_string)):
+    print("Given String is Balanced") 
+else:
+    print("Given String is not Balanced") 
+
 
         

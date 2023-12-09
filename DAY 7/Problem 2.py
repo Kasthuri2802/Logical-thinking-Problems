@@ -7,7 +7,7 @@
 def letters_between_A(string):
     start_index_A = string.find("a")
     end_index_A = string.rfind("a")
-    if (start_index_A==-1 and end_index_A==-1) or (end_index_A==-1):
+    if (start_index_A == end_index_A):
         letters_between_B(string)    
     else:
         print(f"First 'A' is at index : {start_index_A}")
@@ -15,28 +15,31 @@ def letters_between_A(string):
         print("Letters between first 'A' and last 'A' is : ",end="")
         for i in range(start_index_A+1,end_index_A):
             print(string[i],end=" ") 
+        
 
 def letters_between_B(X):
     start_index_B = X.find("b")
     end_index_B = X.rfind("b")
-    if (start_index_B==-1 and end_index_B==-1) or (end_index_B==-1):
-        letters_between_C()    
+    if (start_index_B == end_index_B):
+        letters_between_C(X)    
     else:
         print(f"First 'B' is at index : {start_index_B}")
         print(f"Last 'B' is at index : {end_index_B}")
         print("Letters between first 'B' and last 'B' is : ",end="")
         for i in range(start_index_B+1,end_index_B):
-            print(string[i],end=" ") 
+            print(X[i],end=" ") 
+        
 
-def letters_between_C(string):
+def letters_between_C(Y):
     
-    start_index_C = string.find("c")
-    end_index_C = string.rfind("c")
+    start_index_C = Y.find("c")
+    end_index_C = Y.rfind("c")
     print(f"First 'C' is at index : {start_index_C}")
     print(f"Last 'C' is at index : {end_index_C}")
     print("Letters between first 'C' and last 'C' is : ",end="")
     for i in range(start_index_C+1,end_index_C):
-        print(string[i],end=" ") 
+        print(Y[i],end=" ")
+   
 
 
 input_string = input("Enter the string: ")

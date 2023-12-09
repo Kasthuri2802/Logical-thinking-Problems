@@ -16,7 +16,7 @@ Output [[1,6],[8,10],[15,25]].
 #     inner_list=[]
 #     for j in range(2):
 #         x=int(input("Enter number: "))
-#         inner_list.append(x)
+#         inner_list.append(x)5
 #     outer_list.append(inner_list)
 # for i in range(len(outer_list)):
 #     for j in range(len(inner_list)):
@@ -27,17 +27,20 @@ def mergeList(firstList,secondList):
     if(firstList[-1]>=secondList[0]):
         answerList.append(firstList[0])
         answerList.append(secondList[-1])
+        return answerList
     else:
         answerList.append(firstList)
         answerList.append(secondList)
-    return answerList
-
+        a = secondList 
+        return a
 
 input_list = [[1,3],[2,6],[8,10],[15,20],[16,25] ]
 a=input_list[0]
 result=[]
-for i in range(len(input_list)):
+for i in range(len(input_list)-1):
     a = mergeList(a,input_list[i+1])
     result.append(a)
 print(result)
+    
+
 

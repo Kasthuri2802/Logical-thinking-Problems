@@ -31,14 +31,18 @@ def letters_between_B(X):
         
 
 def letters_between_C(Y):
-    
     start_index_C = Y.find("c")
     end_index_C = Y.rfind("c")
-    print(f"First 'C' is at index : {start_index_C}")
-    print(f"Last 'C' is at index : {end_index_C}")
-    print("Letters between first 'C' and last 'C' is : ",end="")
-    for i in range(start_index_C+1,end_index_C):
-        print(Y[i],end=" ")
+    if(start_index_C==-1 and end_index_C==-1):
+        print("No 'C' is found")
+    elif(start_index_C == end_index_C):
+        print("Only first 'C' is present")
+    else: 
+        print(f"First 'C' is at index : {start_index_C}")
+        print(f"Last 'C' is at index : {end_index_C}")
+        print("Letters between first 'C' and last 'C' is : ",end="")
+        for i in range(start_index_C+1,end_index_C):
+            print(Y[i],end=" ")
    
 
 

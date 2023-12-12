@@ -1,0 +1,29 @@
+
+Examples of valid IPv4 address
+
+192.168.0.1 – This address is valid because it consists of four decimal numbers separated by dots, each number is between 0 and 255, and the first number is not 0 (which is reserved for special purposes).
+10.0.0.1 – This address is valid because it consists of four decimal numbers separated by dots, each number is between 0 and 255, and the first number is 10 (which is a reserved private IP address range).
+172.16.0.1 – This address is valid because it consists of four decimal numbers separated by dots, each number is between 0 and 255, and the first two numbers are 172 and 16 (which is another reserved private IP address range).
+127.0.0.1 – This address is valid because it consists of four decimal numbers separated by dots, each number is between 0 and 255, and it is a special address that represents the loopback interface (used for testing and troubleshooting network connectivity).
+
+
+Examples of Invalid IPv4 Addresses
+
+256.168.0.1 – This address is invalid because the first number is 256, which is outside the range of 0 to 255.
+192.168.0.300 – This address is invalid because the last number is 300, which is outside the range of 0 to 255.
+192.168.1 – This address is invalid because it does not consist of four decimal numbers separated by dots.
+192.168.01.1 – This address is invalid because the third number has a leading zero, which is not allowed in IPv4 addresses.
+192.168.0.0/24 – This address is invalid because it contains a subnet mask (represented by the /24) which is not part of the IP address itself.
+0.0.0.0 – This address is invalid because it is reserved for special purposes and cannot be used as a valid IP address.
+
+
+How can I identify a valid IP address?
+
+To check if an IPv4 address is valid, you can perform the following steps:
+
+Check that the address consists of four decimal numbers separated by dots.
+Check that each decimal number is between 0 and 255.
+Check that the first decimal number is not 0, as it is reserved for special purposes.
+Check that the last decimal number is not 255, as it is reserved for broadcast addresses.
+Check that the address does not conflict with any other address on the same network.
+Alternatively, you can use an online tool or a command-line tool to check if an IPv4 address is valid and reachable.

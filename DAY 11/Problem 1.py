@@ -20,7 +20,6 @@ if c:
     print("Invalid IP Address")   
 else:   
     result = ip_address.split('.')
-    print(result)
     if(len(result)<4):
         print("Invalid IP Address")
     for i in result:

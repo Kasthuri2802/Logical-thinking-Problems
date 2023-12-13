@@ -6,29 +6,35 @@
 # Get an input as string. Return if it is valid or not. 
 # Use string functions.
 
-s = '[@_!#$%^&*()<>?/\|}{~:]'
-c=0
+
 print("****************  Constraints for IP Address  *******************")
 print(" The address consists of four decimal numbers separated by dots ")
 print(" Each decimal number is between 0 and 255 ")
 print(" 192.168.0.1 - Example of an IP Address")
+
+def valid_IP_address(s):  
+
+    # check number of periods  
+    if s.count('.') != 3:  
+        return 'Invalid IP address'
+
+    # check for any special characters    
+    specialChar = '[@_!#$%^&*()<>?/\|}{~:]'
+    for i in range(len(s)):
+        if s[i] in specialChar:
+            return 'Invalid IP address'
+    
+    ip_list = s.split('.')  
+   
+    # check range of each number between periods  
+    for element in ip_list:  
+        if int(element) < 0 or int(element) > 255 or (element[0]=='0' and len(element)!=1):  
+            return 'Invalid IP address'  
+   
+    return 'Valid IP address'  
+   
 ip_address = input("Enter IP address: ")
-for i in range(len(ip_address)):
-    if ip_address[i] in s:
-        c+=1
-if c:
-    print("Invalid IP Address")   
-else:   
-    result = ip_address.split('.')
-    if(len(result)<4):
-        print("Invalid IP Address")
-    for i in result:
-        if(int(i)>0 and int(i)<255):
-            continue
-        else:
-            print("Invalid IP Address")
-
-
+print(valid_IP_address(ip_address))  
 
 
 

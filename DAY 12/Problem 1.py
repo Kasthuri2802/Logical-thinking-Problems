@@ -12,18 +12,23 @@
 
 words_list = ["we", "students", "are" ]
 sep_list = []
-
+i=0
 input_string = input("Enter string: ")
 word = ""
-for i in range(len(input_string)-1):
+while(i<=len(input_string)):
     word = "".join((input_string[i],input_string[i+1]))
     if word in words_list:
         sep_list.append(word)
+        i=i+1
     else:
-        word = "".join((word,input_string[i+2]))
+        i=i+1
+        word = "".join((word,input_string[i+1]))
         if word in words_list:
             sep_list.append(word)
+            i=i+2
+        
     
    
         
     
+

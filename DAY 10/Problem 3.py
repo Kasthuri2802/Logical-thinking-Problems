@@ -22,10 +22,8 @@ num1 = ""
 num2 = ""
 for i in list1:
     num1 += str(i)
-# print(num1)
 for i in list2:
     num2 += str(i)
-# print(num2)
 result = int(num1) + int(num2)
 result = str(result)
 output_list=[]

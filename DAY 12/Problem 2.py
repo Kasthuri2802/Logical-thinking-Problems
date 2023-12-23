@@ -21,7 +21,9 @@ for ele in input_list:
         dict[ele]=1
     else:
         dict[ele]+=1
+
 sort_dict = sorted(dict.items(),key=lambda x:x[1],reverse=True)        # x = lambda a : a + 10   print(x(5))  Output=15
+print(sort_dict)
 result = [key[0] for key in sort_dict]
 for i in range(k):
     output.append(result[i])
